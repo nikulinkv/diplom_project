@@ -1,0 +1,157 @@
+@media (max-width: 1024px) {
+    .header {
+        background-position-x:70%;
+    }
+
+    .head__name {
+        font-size: 3.5rem;
+    }
+
+    .button-mobile {
+        display: block;
+    }
+
+    .display-none {
+        display: none;  
+    }
+
+    nav {
+        text-align: center;
+        position: absolute;
+        display: none;
+        padding: 20px;
+        background-color: #fff;
+        width: 90%;
+        z-index: 10;
+        border-radius: 5px;
+        top: 50px;
+        border: 1px #ff4e2e solid;
+    }
+
+    .header-nav__item {
+        display: block;
+        margin: 0;
+    }
+
+    .header-nav__item:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    .address {
+        margin: 0;
+    }
+
+    .footer__button {
+        padding: 20px 70px;
+        background-color: #ff4e2e;
+        color: #ffffff;
+        border: none;
+        margin-top: 40px;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        font-size: 1.12rem;
+    }
+
+    .wrap__arrow {
+        display: none;
+    }
+
+    .address {
+        margin-top: 40px;
+    }
+
+    #icon-1.icon_fly {
+        transform: translate(80vw, 10vh) rotate(380deg);
+    }
+
+    #icon-2.icon_fly {
+        transform: translate(40vw, 30vh) rotate(320deg);
+    }
+
+    #icon-3.icon_fly {
+        transform: translate(10vw, 20vh) rotate(200deg);
+    }
+
+    #icon-4.icon_fly {
+        transform: translate(5vw, 80vh) rotate(320deg);
+    }
+
+    #icon-5.icon_fly {
+        transform: translate(30vw, 75vh) rotate(380deg);
+    }
+
+    #icon-6.icon_fly {
+        transform: translate(60vw, 30vh) rotate(380deg);
+    }
+
+    #icon-7.icon_fly {
+        display: none;
+    }
+
+    #icon-8.icon_fly {
+        transform: translate(30vw, -10vh) rotate(380deg);
+    }
+
+    #icon-9.icon_fly {
+        display: none;
+    }
+
+    #icon-10.icon_fly {
+        transform: translate(95vw, 25vh) rotate(340deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .head__button {
+        margin:0 auto;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .button-mobile {
+        background-size: contain;
+        height: 20px;
+    }
+
+    .phone {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .phone__link {
+        font-size: 18px;
+    }
+
+    .phone__link_mobile {
+        display: block;
+        width: 26px;
+        height: 26px;
+    }
+
+    .header {
+        background-position-x: 75%;
+    }
+
+    #icon-1.icon_fly {
+        transform: translate(70vw, 10vh) rotate(380deg);
+    }
+
+    #icon-2.icon_fly,
+    #icon-5.icon_fly,
+    #icon-6.icon_fly,
+    #icon-8.icon_fly,
+    #icon-10.icon_fly {
+        display: none;
+    }
+
+    #icon-3.icon_fly {
+        transform: translate(10vw, 10vh) rotate(200deg);
+    }
+
+    #icon-4.icon_fly {
+        transform: translate(5vw, 30vh) rotate(320deg);
+    }
+}
