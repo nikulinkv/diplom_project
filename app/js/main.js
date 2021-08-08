@@ -17,37 +17,7 @@ $('a[href^="#"], *[data-href^="#"]').on("click", (function (e) {
         mask: "+7 (999) 999-99-99"
     }),
 
-    $("form").each((function () {
-        $(this).validate({
-            errorPlacement: (e, c) => !0,
-            focusInvalid: !1,
-            rules: {
-                "Имя": {
-                    required: !0
-                },
-                "Телефон": {
-                    required: !0,
-                    minlenght: 11
-                },
-                "Текст": {
-                    required: !0
-                }
-            },
-            submitHandler(e) {
-                let c = $(e);
-                return $.ajax({
-                        type: "POST",
-                        url: "mail.php",
-                        data: c.serialize(),
-                        success: function (e) {
-                            c.trigger("reset"),
-                                window.location = "/thank-you.html"
-                        }
-                    }),
-                    !1
-            }
-        })
-    })),
+    
 
     $(".button-mobile").on("click", (function (e) {
         $("nav").is(":hidden") ? $("nav").show(300) : $("nav").hide(300),
@@ -107,6 +77,42 @@ const scroll = function (e) {
             }),
             $("body, html").off("keydown DOMMouseScroll")
     };
+
+
+    $("form").each((function () {
+        $(this).validate({
+            errorPlacement: (e, c) => !0,
+            focusInvalid: !1,
+            rules: {
+                "Имя": {
+                    required: !0
+                },
+                "Телефон": {
+                    required: !0,
+                    minlenght: 11
+                },
+                "Текст": {
+                    required: !0
+                }
+            },
+            submitHandler(e) {
+                let c = $(e);
+                let modal = $('.modal');
+                let thankYou = $('.thank-you');
+                return $.ajax({
+                        type: "POST",
+                        url: "mail.php",
+                        data: c.serialize(),
+                        success: function (e) {
+                            c.trigger("reset"),
+                            c.hide(300),
+                            thankYou.show(300)
+                        }
+                    }),
+                    !1
+            }
+        })
+    })),
 
 $(window).on("resize load", (function (e) {
     var e = $(".head__wrap");

@@ -23,6 +23,14 @@ html {
     z-index: 20;
 }
 
+.thank-you {
+    position: relative;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+    display: none;
+}
+
 .modal__close {
     position: absolute;
     top: 15px;
