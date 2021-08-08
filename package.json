@@ -1,0 +1,30 @@
+{
+  "name": "gulp-start",
+  "version": "1.0.0",
+  "description": "My first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NikulinKV",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^5.0.0-beta1",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify-es": "^2.0.0",
+    "inputmask": "^5.0.5",
+    "jquery": "^3.5.1",
+    "jquery-validation": "^1.19.3",
+    "owl.carousel": "^2.3.4"
+  },
+  "dependencies": {
+    "del": "^6.0.0"
+  }
+}
