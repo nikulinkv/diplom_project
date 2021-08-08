@@ -1,4 +1,4 @@
-$('a[href^="#"], *[data-href^="#"]').on("click", (function (e) {
+    $('a[href^="#"], *[data-href^="#"]').on("click", (function (e) {
         e.preventDefault();
         var c = $(this).attr("data-href") ? $(this).attr("data-href") : $(this).attr("href");
         $("html,body").stop().animate({
@@ -17,14 +17,19 @@ $('a[href^="#"], *[data-href^="#"]').on("click", (function (e) {
         mask: "+7 (999) 999-99-99"
     }),
 
-    
+    $(document).on('mouseup', function (e){
+        var button = $(".button-mobile")
+		var div = $(".header-nav");
 
-    $(".button-mobile").on("click", (function (e) {
-        $("nav").is(":hidden") ? $("nav").show(300) : $("nav").hide(300),
-            $(".header-nav__link").on("click", (function () {
-                $("nav").hide(300)
-            }))
-    })),
+		if (!div.is(e.target)
+		    && div.is(":visible")) {
+			div.hide(300);
+		}
+        else if (button.is(e.target)
+                && div.is(":hidden")) {
+            div.show(300);
+        }
+	});
 
     $(".owl-carousel").owlCarousel({
         loop: !0,
@@ -47,8 +52,8 @@ $('a[href^="#"], *[data-href^="#"]').on("click", (function (e) {
             }
         }
     });
-var owl = $(".owl-carousel");
-owl.owlCarousel(),
+    var owl = $(".owl-carousel");
+    owl.owlCarousel(),
     $(".wrap__arrow_right").on("click", (function () {
         owl.trigger("next.owl.carousel")
     })),
@@ -56,7 +61,7 @@ owl.owlCarousel(),
         owl.trigger("prev.owl.carousel", [300])
     }));
 
-const scroll = function (e) {
+    const scroll = function (e) {
         e.preventDefault()
     },
     disableScroll = function (e) {
@@ -114,7 +119,7 @@ const scroll = function (e) {
         })
     })),
 
-$(window).on("resize load", (function (e) {
+    $(window).on("resize load", (function (e) {
     var e = $(".head__wrap");
     $(window).width() < 768 ? (e.remove(),
             e.appendTo(".mobile__head")) : (e.remove(),
