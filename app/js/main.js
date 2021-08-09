@@ -19,15 +19,16 @@
 
     $(document).on('mouseup', function (e){
         var button = $(".button-mobile")
-		var div = $(".header-nav");
+		var div = $(".header-nav__list");
 
 		if (!div.is(e.target)
+            && window.innerWidth < 992
 		    && div.is(":visible")) {
-			div.hide(300);
+			div.hide("slow");
 		}
         else if (button.is(e.target)
-                && div.is(":hidden")) {
-            div.show(300);
+            && div.is(":hidden")) {
+            div.show("slow");
         }
 	});
 

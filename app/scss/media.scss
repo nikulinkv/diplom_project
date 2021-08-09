@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     .header {
         background-position-x:70%;
     }
@@ -11,15 +11,13 @@
         position: relative;
     }
 
-    .button-mobile {
-        display: block;
-    }
-
-    .display-none {
-        display: none;  
-    }
-
     .header-nav {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .header-nav__list {
         text-align: center;
         position: absolute;
         left: 0;
