@@ -23,14 +23,6 @@ html {
     z-index: 20;
 }
 
-.thank-you {
-    position: relative;
-    padding: 30px;
-    border-radius: 5px;
-    background-color: #FBFBFB;
-    display: none;
-}
-
 .modal__close {
     position: absolute;
     top: 15px;
@@ -169,6 +161,7 @@ html {
     background: linear-gradient(to top right, #ff8f5a, #ff2f96);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
 }
 
 .price__icon {
