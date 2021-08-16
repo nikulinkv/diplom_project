@@ -15,9 +15,10 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff"></head>
 <body>
+
     <div class="modal">
         <form class="form">
-            <a class="modal__close">X</a>
+            <a class="modal__close">&#10006;</a>
             <input type="hidden" name="project_name" value="Веб-разработчик">
             <input type="hidden" name="admin_email" value="nikulinkv@yandex.ru">
             <input type="hidden" name="form_subject" value="Заявка">
@@ -25,14 +26,15 @@
             <input class="form__input" type="text" name="name" id="name" placeholder="Ваше имя" title="Введите Ваше имя" required>
             <input class="form__input" type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__" title="Введите Ваш телефон" required>
             <textarea class="form__text" name="text" id="text" rows="3" placeholder="Ваше сообщение" title="Напишите Ваше сообщение" required></textarea>
-            <button role="button" class="form__button button_red" type="submit">Отправить заявку</button>
+            <button class="form__button button_red" type="submit">Отправить заявку</button>
         </form>
         <div class="thank-you">
-            <a class="modal__close">X</a>
+            <a class="modal__close">&#10006;</a>
             <h1>Спасибо!</h1>
             <p>Мы свяжемся с Вами в течении 15 минут</p>
         </div>
     </div>
+
     <header class="header">
         <span class="header__icon" id="icon-1">&lt;div&gt;</span>
         <span class="header__icon" id="icon-2">&lt;div&gt;</span>
@@ -58,9 +60,9 @@
                     </nav>
                     <div class="phone d-flex align-items-center">
                         <a class="phone__link" href="tel:+79321114061">+7 (932) 111-40-61</a>
-                        <button role="button" class="header__button button_pink" name="header__button" type="submit">Заказать звонок</button>
+                        <button class="header__button button_pink" name="header__button" type="submit">Заказать звонок</button>
                     </div>
-                    <a class="phone__link_mobile" href="tel:+79321114061"><img src="./img/call.png" aria-label="phone__link_mobile"></a>
+                    <a class="phone__link_mobile" href="tel:+79321114061"><img src="./img/call.png" aria-label="phone__link_mobile" alt="телефон"></a>
                 </div>
             </div>
         </div>
@@ -78,73 +80,80 @@
             </div>
         </div>
     </header>
-    <div class="mobile__head"></div>
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="about__header">Что я делаю</h2>
-            <div class="row">
-                <div class="col-xl-3 col-lg-6">
-                    <p class="about__item-1 about__description">Вёрстка лендинг–страниц и сайтов любой сложности</p>
-                </div>
-                <div class="col-xl-3 col-lg-6">
-                    <p class="about__item-2 about__description">Адаптивная вёрстка под все браузеры и устройства</p>
-                </div>
-                <div class="col-xl-3 col-lg-6">
-                    <p class="about__item-3 about__description">Frontend–разработка и программирование</p>
-                </div>
-                <div class="col-xl-3 col-lg-6">
-                    <p class="about__item-4 about__description">Исправление и доработка существующей вёрстки</p>
-                </div>
-            </div>
-            <div class="row">
-                <button role="button" class="about__button button_red">Узнать стоимость</button>
-            </div>
-        </div>
-    </section>
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="features__header">Примеры моих работ</h2>
-            <div class="row features__row">
-                <div class="wrap__arrow">
-                    <a class="wrap__arrow_left"></a>
-                    <a class="wrap__arrow_right"></a>
-                </div>
-                <div class="owl-carousel owl-theme">
-                    <div>
-                        <img src="img/2-1.jpg" alt="Сайт психолога">
-                        <p class="owl-carousel__description">Сайт психолога Веры Антоновой</p>
+
+    <main>
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="about__header">Что я делаю</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <p class="about__item-1 about__description">Вёрстка лендинг–страниц и сайтов любой сложности</p>
                     </div>
-                    <div>
-                        <img src="img/2-2.jpg" alt="Сайт детской одежды">
-                        <p class="owl-carousel__description">Сайт магазина детской одежды</p>
+                    <div class="col-lg-3 col-md-6">
+                        <p class="about__item-2 about__description">Адаптивная вёрстка под все браузеры и устройства</p>
                     </div>
-                    <div>
-                        <img src="img/2-3.jpg" alt="Сайт Рыболов">
-                        <p class="owl-carousel__description">Сайт магазина «Рыболов»</p>
+                    <div class="col-lg-3 col-md-6">
+                        <p class="about__item-3 about__description">Frontend–разработка и программирование</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <p class="about__item-4 about__description">Исправление и доработка существующей вёрстки</p>
                     </div>
                 </div>
+                <button class="about__button button_red">Узнать стоимость</button>
             </div>
-            <div class="row">
-                <button role="button" class="features__button button_red">Заказать проект</button>
-            </div>
-        </div>
-    </section>
-    <section class="price" id="price">
-        <span class="price__icon" id="icon-6">&lt;div&gt;</span>
-        <span class="price__icon" id="icon-7">{ }</span>
-        <span class="price__icon" id="icon-8">{ }</span>
-        <span class="price__icon" id="icon-9">#</span>
-        <span class="price__icon" id="icon-10">&lt;/&gt;</span>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="price__header">Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</h3>
-                    <p class="price__description">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в зависимости
-                        от сложности задач.</p>
+        </section>
+    
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="features__header">Примеры моих работ</h2>
+                <div class="row features__row">
+                    <div class="owl-carousel owl-theme">
+                        <div>
+                            <img src="img/2-1.jpg" alt="Сайт психолога">
+                            <p class="owl-carousel__description">Сайт психолога Веры Антоновой</p>
+                        </div>
+                        <div>
+                            <img src="img/2-2.jpg" alt="Сайт детской одежды">
+                            <p class="owl-carousel__description">Сайт магазина детской одежды</p>
+                        </div>
+                        <div>
+                            <img src="img/2-3.jpg" alt="Сайт Рыболов">
+                            <p class="owl-carousel__description">Сайт магазина «Рыболов»</p>
+                        </div>
+                        <div>
+                            <img src="img/2-2.jpg" alt="Сайт детской одежды">
+                            <p class="owl-carousel__description">Сайт магазина детской одежды</p>
+                        </div>
+                        <div>
+                            <img src="img/2-3.jpg" alt="Сайт Рыболов">
+                            <p class="owl-carousel__description">Сайт магазина «Рыболов»</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="features__button button_red">Заказать проект</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <section class="price" id="price">
+            <span class="price__icon" id="icon-6">&lt;div&gt;</span>
+            <span class="price__icon" id="icon-7">{ }</span>
+            <span class="price__icon" id="icon-8">{ }</span>
+            <span class="price__icon" id="icon-9">#</span>
+            <span class="price__icon" id="icon-10">&lt;/&gt;</span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="price__header">Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</h3>
+                        <p class="price__description">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в зависимости
+                            от сложности задач.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -176,7 +185,7 @@
                     </address>
                 </div>
                 <div class="col-lg-4 col-md-6 d-flex flex-wrap justify-content-lg-end">
-                    <button role="button" class="footer__button button_pink" type="submit" name="footer__button">Заказать звонок</button>
+                    <button class="footer__button button_pink" type="submit" name="footer__button">Заказать звонок</button>
                     <div class="footer__social-icons">
                         <a class="footer__icon icon_vk" target="_blank" rel="noreferrer noopener" aria-label="Vkontakte" href="https://vk.com/"></a>
                         <a class="footer__icon icon_fb" target="_blank" rel="noreferrer noopener" aria-label="Facebook" href="https://facebook.com/"></a>
@@ -187,6 +196,16 @@
             </div>
         </div>
     </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-center py-4">
+                    <small>&copy; Константин Никулин, 2018 - 2021</small>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.min.js"></script>
 </body>

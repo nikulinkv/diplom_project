@@ -10,12 +10,6 @@ $('a[href^="#"], *[data-href^="#"]').on("click", (function (e) {
 // Fly icon
 $(window).on("load", (function () {
     $("span[id^=icon]").addClass("icon_fly");
-    setTimeout(function () {
-        $(".header__icon, .price__icon").css({
-            'opacity' : '1',
-            'transition': 'all 1s'
-        });
-    }, 300);
 })),
 
 // Phone mask
@@ -40,37 +34,30 @@ $(document).on('mouseup', function (e){
 });
 
 // Owl-carousel
-$(".owl-carousel").owlCarousel({
-    loop: !0,
+var owl = $(".owl-carousel");
+owl.owlCarousel({
     margin: 50,
-    autoplay: !0,
-    smartSpeed: 2e3,
-    autoplayTimeout: 6e3,
-    autoplayHoverPause: !0,
+    loop: true,
+    dots: false,
+    nav: false,
+    navText: ["<img src='img/arrow-left.png'>","<img src='img/arrow-right.png'>"],
     responsive: {
         0: {
             items: 1,
-            dots: !0
+            dots: true
         },
-        700: {
+        767: {
             items: 2,
-            dots: !0
+            dots: true
         },
-        1024: {
-            items: 3
+        992: {
+            items: 3,
+            nav: true,
         }
     }
-});
-var owl = $(".owl-carousel");
-owl.owlCarousel(),
-$(".wrap__arrow_right").on("click", (function () {
-    owl.trigger("next.owl.carousel")
-})),
-$(".wrap__arrow_left").on("click", (function () {
-    owl.trigger("prev.owl.carousel", [300])
-}));
+})
 
-// Onn/off work scroll
+// Onn/off scroll
 const scroll = function (e) {
     e.preventDefault()
 },
@@ -112,19 +99,20 @@ $("form").each((function () {
         },
         submitHandler(e) {
             let c = $(e);
-            let modal = $('.modal');
+            let formInput = $("form :input")
             let thankYou = $('.thank-you');
             return $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: c.serialize(),
-                    success: function (e) {
-                        c.trigger("reset"),
-                        c.hide(300),
-                        thankYou.show(300)
-                    }
-                }),
-                !1
+                type: "POST",
+                url: "mail.php",
+                data: c.serialize(),
+                success: function (e) {
+                    c.trigger("reset"),
+                    c.hide(300),
+                    formInput.val(""),
+                    thankYou.show(300)
+                }
+            }),
+            !1
         }
     })
 })),
@@ -135,19 +123,19 @@ var e = $(".head__wrap");
 $(window).width() < 768 ? (e.remove(),
         e.appendTo(".mobile__head")) : (e.remove(),
         e.appendTo(".head")),
-    $(".header__button, .head__button, .about__button, .features__button, .footer__button").on("click", (function () {
-        $(".modal").css("display", "flex"),
-            $(".modal").fadeIn(1500, disableScroll)
-    }))
+$(".header__button, .head__button, .about__button, .features__button, .footer__button").on("click", (function () {
+    $(".modal").css("display", "flex"),
+        $(".modal").fadeIn(1500, disableScroll)
+}))
 
-    $("#text").on("mouseenter", function(){
-        if($(this)[0].scrollHeight > $(this)[0].clientHeight) {
-            $("body, html", enableScroll)
-        }
-        else {
-            $("body, html", disableScroll)
-        }
-    })
+$("#text").on("mouseenter", function(){
+    if($(this)[0].scrollHeight > $(this)[0].clientHeight) {
+        $("body, html", enableScroll)
+    }
+    else {
+        $("body, html", disableScroll)
+    }
+})
 
 // Clearing the form after sending the data
 $(".modal").on("click", (function (e) {
