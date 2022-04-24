@@ -121,7 +121,7 @@ $("form").each((function () {
                     success: function (e) {
                         c.trigger("reset"),
                         c.hide(300),
-                        thankYou.show(300)
+                        // thankYou.show(300)
                     }
                 }),
                 !1
